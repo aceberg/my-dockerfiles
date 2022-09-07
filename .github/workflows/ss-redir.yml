@@ -3,8 +3,8 @@ name: ss-redir
 on:
   push:
     branches: [ "main" ]
-    paths:
-    - 'ss-redir/**'
+    # paths:
+    # - 'ss-redir/**'
   pull_request:
     branches: [ "main" ]
     paths:

@@ -26,6 +26,7 @@ jobs:
         with:
           image: ${{ secrets.DOCKER_USERNAME }}/${{ env.IMAGE_NAME }}
           addLatest: yes
+          dockerfile: ${{ env.IMAGE_NAME }}/Dockerfile 
           directory: ${{ env.IMAGE_NAME }}
           registry: docker.io
           username: ${{ secrets.DOCKER_USERNAME }}

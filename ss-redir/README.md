@@ -1,6 +1,6 @@
 # ss-redir
 
-Container with shadowsocks-libev in nat client mode.
+Shadowsocks-libev client in nat mode
 
 ## Config
 Set the following env variables from your Shadowsocks server
@@ -13,11 +13,22 @@ Set the following env variables from your Shadowsocks server
 | METHOD | Encryption method |
 
 ## Usage
-```
+### Create shadowsocks container
+IMPORTANT: `--cap-add=NET_ADMIN` needed for this to work!
+
+```sh
 docker run --name ss-redir \
  --env SERVER_IP="YOUR_IP" \
  --env SERVER_PORT="PORT"  \
  --env PASSWORD="PW"       \
+ --env METHOD="METHOD"     \
  --cap-add=NET_ADMIN       \
 aceberg/ss-redir
 ```
+### Create any client container
+```sh
+docker run --name ubuntu        \
+--network='container:ss-redir'  \
+ubuntu
+```
+Now this `ubuntu` container will be using network through shadowsocks proxy

@@ -3,8 +3,8 @@ name: ss-redir
 on:
   push:
     branches: [ "main" ]
-    # paths:
-    # - 'ss-redir/**'
+    paths:
+    - 'ss-redir/**'
   pull_request:
     branches: [ "main" ]
     paths:
@@ -25,7 +25,7 @@ jobs:
         uses: mr-smithers-excellent/docker-build-push@v5.6
         with:
           image: ${{ secrets.DOCKER_USERNAME }}/${{ env.IMAGE_NAME }}
-          addLatest: yes
+          addLatest: true
           dockerfile: ${{ env.IMAGE_NAME }}/Dockerfile 
           directory: ${{ env.IMAGE_NAME }}
           registry: docker.io

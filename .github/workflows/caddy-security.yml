@@ -1,18 +1,18 @@
-name: ss-redir
+name: caddy-security
 
 on:
   workflow_dispatch:
   push:
     branches: [ "main" ]
     paths:
-    - 'ss-redir/**'
+    - 'caddy-security/**'
   pull_request:
     branches: [ "main" ]
     paths:
-    - 'ss-redir/**'
+    - 'caddy-security/**'
 
 env:
-  IMAGE_NAME: ss-redir
+  IMAGE_NAME: caddy-security
 
 jobs:
   build:

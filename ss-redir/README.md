@@ -1,6 +1,10 @@
 # ss-redir
 
-Shadowsocks-libev client in nat mode
+[![ss-redir](https://github.com/aceberg/my-dockerfiles/actions/workflows/ss-redir.yml/badge.svg)](https://github.com/aceberg/my-dockerfiles/actions/workflows/ss-redir.yml)
+![Docker Image Size (latest semver)](https://img.shields.io/docker/image-size/aceberg/ss-redir)
+
+Shadowsocks-libev client in nat mode   
+https://github.com/aceberg/my-dockerfiles/tree/main/ss-redir
 
 ## Config
 Set the following env variables from your Shadowsocks server

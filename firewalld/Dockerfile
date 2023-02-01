@@ -1,7 +1,9 @@
 FROM ubuntu:20.04
 
 RUN apt update && apt install -y firewalld \
-                                 nano net-tools curl \
+                                 nano net-tools \
                                  && apt clean
 
-ENTRYPOINT ["/usr/sbin/firewalld", "--nofork", "--nopid"]
+COPY run.sh .
+
+ENTRYPOINT ["bash", "run.sh"]

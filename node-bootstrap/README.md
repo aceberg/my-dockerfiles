@@ -3,7 +3,10 @@
 
 # Node Bootstrap
 
-http-server hosting node modules for my projects locally:
+http-server hosting node modules for my projects locally
+
+# Tags
+5.3.0, latest:
 - bootstrap@5.3.0
 - bootstrap-icons@1.10.5
 - bootswatch@5.3.0
@@ -12,7 +15,6 @@ http-server hosting node modules for my projects locally:
 
 ```sh
 docker run --name node-bootstrap          \
-    -v ~/.dockerdata/node-bootstrap:/data \
     -p 8850:8850                          \
     aceberg/node-bootstrap
 ```

@@ -47,8 +47,8 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           context: .
-          file: ${{ env.IMAGE_NAME }}/Dockerfile
-          platforms: linux/amd64,linux/arm/v7,linux/arm64
+          file: ${{ env.IMAGE_NAME }}/Dockerfile-${{ env.VERSION }}
+          platforms: linux/amd64,linux/arm/v7,linux/arm64/v8
           push: true
           tags: |
             ${{ secrets.DOCKER_USERNAME }}/${{ env.IMAGE_NAME }}:latest

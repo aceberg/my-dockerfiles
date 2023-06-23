@@ -48,10 +48,10 @@ jobs:
         with:
           context: .
           file: ${{ env.IMAGE_NAME }}/Dockerfile-${{ env.VERSION }}
-          platforms: linux/arm64/v8
+          platforms: linux/arm/v7
           push: true
           tags: |
-            ${{ secrets.DOCKER_USERNAME }}/${{ env.IMAGE_NAME }}:latest
-            ${{ secrets.DOCKER_USERNAME }}/${{ env.IMAGE_NAME }}:${{ env.VERSION }}
-            ghcr.io/${{ secrets.DOCKER_USERNAME }}/${{ env.IMAGE_NAME }}:latest
-            ghcr.io/${{ secrets.DOCKER_USERNAME }}/${{ env.IMAGE_NAME }}:${{ env.VERSION }}
+            ${{ secrets.DOCKER_USERNAME }}/${{ env.IMAGE_NAME }}:arm-v7-latest
+            ${{ secrets.DOCKER_USERNAME }}/${{ env.IMAGE_NAME }}:arm-v7-${{ env.VERSION }}
+            ghcr.io/${{ secrets.DOCKER_USERNAME }}/${{ env.IMAGE_NAME }}:arm-v7-latest
+            ghcr.io/${{ secrets.DOCKER_USERNAME }}/${{ env.IMAGE_NAME }}:arm-v7-${{ env.VERSION }}

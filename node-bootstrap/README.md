@@ -19,6 +19,6 @@ docker run --name node-bootstrap          \
     aceberg/node-bootstrap
 ```
 
-## Dockerfile
+## GitHub
 
-https://github.com/aceberg/my-dockerfiles/blob/main/node-bootstrap/Dockerfile-5.3.0
+https://github.com/aceberg/my-dockerfiles/node-bootstrap

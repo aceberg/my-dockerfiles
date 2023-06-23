@@ -21,4 +21,4 @@ docker run --name node-bootstrap          \
 
 ## GitHub
 
-https://github.com/aceberg/my-dockerfiles/node-bootstrap
+https://github.com/aceberg/my-dockerfiles/tree/main/node-bootstrap

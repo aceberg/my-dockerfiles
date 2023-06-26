@@ -10,6 +10,7 @@ http-server hosting node modules for my projects locally
 - bootstrap@5.3.0
 - bootstrap-icons@1.10.5
 - bootswatch@5.3.0
+- get-google-fonts
 
 ## Usage
 

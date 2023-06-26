@@ -8,8 +8,8 @@ RUN npm install http-server -g && \
 
 RUN apk add --no-cache bash
 
-COPY download-fonts.sh .
-RUN bash download-fonts.sh node_modules/bootswatch
+COPY download-fonts.sh /download-fonts.sh
+RUN bash /download-fonts.sh /app/node_modules/bootswatch
 
 ENTRYPOINT ["http-server"]
 CMD ["--cors", "-p", "8850"]

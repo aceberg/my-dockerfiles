@@ -7,7 +7,7 @@ function get_ttf_links () {
     cat fonts.css | sed '/src: url/!d' | sed 's/  src: url(//;s/) .*//' > links.txt
     while read LINK; do
         # echo "Downloading $LINK"
-        wget -q -N $LINK
+        wget -q $LINK
     done <links.txt
 
     # Replace links in fonts.css for local names

@@ -8,7 +8,7 @@ RUN npm install http-server -g && \
 
 RUN apk add --no-cache bash
 
-COPY download-fonts.sh /download-fonts.sh
+COPY node-bootstrap/download-fonts.sh /download-fonts.sh
 RUN bash /download-fonts.sh /app/node_modules/bootswatch
 
 ENTRYPOINT ["http-server"]

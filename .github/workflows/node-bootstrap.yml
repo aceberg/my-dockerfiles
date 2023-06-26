@@ -46,8 +46,8 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v4
         with:
-          context: ${{ env.IMAGE_NAME }}/.
-          file: Dockerfile-${{ env.VERSION }}
+          context: .
+          file: ${{ env.IMAGE_NAME }}/Dockerfile-${{ env.VERSION }}
           platforms: linux/amd64,linux/arm64/v8 # no arm/v7 - workflow hangs
           push: true
           tags: |

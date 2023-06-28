@@ -9,7 +9,7 @@ http-server hosting node modules for my projects locally
 [5.3.0](https://github.com/aceberg/my-dockerfiles/blob/main/node-bootstrap/Dockerfile-5.3.0), [latest](https://github.com/aceberg/my-dockerfiles/blob/main/node-bootstrap/Dockerfile-5.3.0):
 - bootstrap@5.3.0
 - bootstrap-icons@1.10.5
-- bootswatch@5.3.0
+- bootswatch@5.3.0 with google fonts
 
 ## Usage
 
@@ -18,6 +18,10 @@ docker run --name node-bootstrap          \
     -p 8850:8850                          \
     aceberg/node-bootstrap
 ```
+
+## Supported apps
+- [miniboard](https://github.com/aceberg/miniboard)
+- [WatchYourLAN](https://github.com/aceberg/WatchYourLAN)
 
 ## GitHub
 

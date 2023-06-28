@@ -1,4 +1,4 @@
-name: node-bootstrap
+name: node-bootstrap-readme
 
 on:
   workflow_dispatch:

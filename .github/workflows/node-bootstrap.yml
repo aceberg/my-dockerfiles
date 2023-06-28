@@ -1,4 +1,4 @@
-name: node-bootstrap
+name: node-bootstrap-docker
 
 on:
   workflow_dispatch:

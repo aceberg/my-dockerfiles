@@ -1,0 +1,16 @@
+FROM node:20-alpine
+
+EXPOSE 8850/tcp
+WORKDIR /app
+
+RUN npm install http-server -g && \
+    npm install bootstrap@5.3.2 bootstrap-icons@1.11.0 bootswatch@5.3.2
+
+RUN apk add --no-cache bash
+
+COPY node-bootstrap/download-fonts.sh /download-fonts.sh
+RUN bash /download-fonts.sh /app/node_modules/bootswatch
+RUN mkdir -p /app/icons
+
+ENTRYPOINT ["http-server"]
+CMD ["--cors", "-p", "8850"]

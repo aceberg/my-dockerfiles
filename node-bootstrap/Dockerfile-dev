@@ -1,7 +1,7 @@
 FROM ubuntu AS builder
 
 WORKDIR /git
-RUN apt update && apt install git && git clone https://github.com/aceberg/aceberg-bootswatch-fork.git
+RUN apt update && apt install -y git && git clone https://github.com/aceberg/aceberg-bootswatch-fork.git
 RUN mkdir bootswatch
 RUN cp -R aceberg-bootswatch-fork/dist bootswatch/
 

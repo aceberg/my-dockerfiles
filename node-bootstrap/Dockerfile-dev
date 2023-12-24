@@ -15,7 +15,7 @@ RUN npm install http-server -g && \
     npm install bootstrap@5.3.2 bootstrap-icons@1.11.0
 RUN apk add --no-cache bash
 
-COPY --from=builder /git/bootswatch /app/node_modules/
+COPY --from=builder /git/bootswatch /app/node_modules/bootswatch
 
 COPY node-bootstrap/download-fonts.sh /download-fonts.sh
 RUN bash /download-fonts.sh /app/node_modules/bootswatch

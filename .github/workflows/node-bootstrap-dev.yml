@@ -32,4 +32,4 @@ jobs:
           platforms: linux/amd64
           push: true
           tags: |
-            ${{ secrets.DOCKER_USERNAME }}/${{ env.IMAGE_NAME }}:dev
+            ${{ secrets.DOCKER_USERNAME }}/${{ env.IMAGE_NAME }}:devjs

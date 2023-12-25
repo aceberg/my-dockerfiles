@@ -6,13 +6,19 @@
 http-server hosting node modules for my projects locally
 
 # Tags
-[5.3.2](https://github.com/aceberg/my-dockerfiles/blob/main/node-bootstrap/Dockerfile-5.3.2), [latest](https://github.com/aceberg/my-dockerfiles/blob/main/node-bootstrap/Dockerfile-5.3.2):
+[5.3.2-a](https://github.com/aceberg/my-dockerfiles/blob/main/node-bootstrap/Dockerfile-5.3.2-a), [latest](https://github.com/aceberg/my-dockerfiles/blob/main/node-bootstrap/Dockerfile-5.3.2-a):
 - bootstrap@5.3.2
 - bootstrap-icons@1.11.0
-- bootswatch@5.3.2 with google fonts
+- [my fork](https://github.com/aceberg/aceberg-bootswatch-fork) of bootswatch@5.3.2 (more themes) with google fonts
+- chart.js@4.4.1
+- chartjs-chart-matrix@2.0.1
 
 <details>
   <summary>Old tags</summary>
+    <a href="https://github.com/aceberg/my-dockerfiles/blob/main/node-bootstrap/Dockerfile-5.3.0">5.3.2</a>:<br>
+    <li>bootstrap@5.3.2</li>
+    <li>bootstrap-icons@1.11.0</li>
+    <li>bootswatch@5.3.2 with google fonts</li>
     <a href="https://github.com/aceberg/my-dockerfiles/blob/main/node-bootstrap/Dockerfile-5.3.0">5.3.0</a>:<br>
     <li>bootstrap@5.3.0</li>
     <li>bootstrap-icons@1.10.5</li>
@@ -29,6 +35,7 @@ docker run --name node-bootstrap       \
 ```
 
 ## Supported apps
+- [ExerciseDiary](https://github.com/aceberg/ExerciseDiary)
 - [miniboard](https://github.com/aceberg/miniboard)
 - [WatchYourLAN](https://github.com/aceberg/WatchYourLAN)
 

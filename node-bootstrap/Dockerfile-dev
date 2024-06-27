@@ -1,21 +1,11 @@
-FROM ubuntu AS builder
-
-WORKDIR /git
-RUN apt update && apt install -y git && git clone https://github.com/aceberg/aceberg-bootswatch-fork.git
-RUN mkdir bootswatch
-RUN cp -R aceberg-bootswatch-fork/dist bootswatch/
-
-
-
 FROM node:20-alpine
 EXPOSE 8850/tcp
 WORKDIR /app
 
 RUN npm install http-server -g && \
-    npm install bootstrap@5.3.2 bootstrap-icons@1.11.0 chart.js@4.4.1 chartjs-chart-matrix@2.0.1
+    npm install bootstrap@5.3.3 bootstrap-icons@1.11.3 chart.js@4.4.1 chartjs-chart-matrix@2.0.1 aceberg-bootswatch-fork@5.3.3-2
 RUN mkdir -p /app/icons && apk add --no-cache bash
 
-COPY --from=builder /git/bootswatch /app/node_modules/bootswatch
 COPY node-bootstrap/download-fonts.sh /download-fonts.sh
 
 RUN bash /download-fonts.sh /app/node_modules/bootswatch

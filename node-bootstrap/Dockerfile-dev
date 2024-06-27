@@ -4,7 +4,7 @@ WORKDIR /app
 
 RUN npm install http-server -g && \
     npm install bootstrap@5.3.3 bootstrap-icons@1.11.3 chart.js@4.4.3 chartjs-chart-matrix@2.0.1 aceberg-bootswatch-fork@5.3.3-2
-RUN mv aceberg-bootswatch-fork bootswatch &&\
+RUN mv /app/node_modules/aceberg-bootswatch-fork /app/node_modules/bootswatch &&\
  mkdir -p /app/icons &&\
  apk add --no-cache bash
 

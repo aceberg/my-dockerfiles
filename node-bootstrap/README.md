@@ -6,16 +6,23 @@
 http-server hosting node modules for my projects locally
 
 # Tags
-[5.3.2-a](https://github.com/aceberg/my-dockerfiles/blob/main/node-bootstrap/Dockerfile-5.3.2-a), [latest](https://github.com/aceberg/my-dockerfiles/blob/main/node-bootstrap/Dockerfile-5.3.2-a):
-- bootstrap@5.3.2
-- bootstrap-icons@1.11.0
-- [my fork](https://github.com/aceberg/aceberg-bootswatch-fork) of bootswatch@5.3.2 (more themes) with google fonts
-- chart.js@4.4.1
-- chartjs-chart-matrix@2.0.1
+
+<a href="https://github.com/aceberg/my-dockerfiles/blob/main/node-bootstrap/Dockerfile-5.3.3">5.3.3</a>, latest:
+    <li>bootstrap@5.3.3</li>
+    <li>bootstrap-icons@1.11.3</li>
+    <li><a href="https://github.com/aceberg/aceberg-bootswatch-fork">my fork</a> of bootswatch@5.3.3 (more themes) with google fonts</li>
+    <li>chart.js@4.4.3</li>
+    <li>chartjs-chart-matrix@2.0.1</li>
 
 <details>
   <summary>Old tags</summary>
-    <a href="https://github.com/aceberg/my-dockerfiles/blob/main/node-bootstrap/Dockerfile-5.3.0">5.3.2</a>:<br>
+    <a href="https://github.com/aceberg/my-dockerfiles/blob/main/node-bootstrap/Dockerfile-5.3.2-a">5.3.2-a</a>:<br>
+    <li>bootstrap@5.3.2</li>
+    <li>bootstrap-icons@1.11.0</li>
+    <li><a href="https://github.com/aceberg/aceberg-bootswatch-fork">my fork</a> of bootswatch@5.3.2 (more themes) with google fonts</li>
+    <li>chart.js@4.4.1</li>
+    <li>chartjs-chart-matrix@2.0.1</li>
+    <a href="https://github.com/aceberg/my-dockerfiles/blob/main/node-bootstrap/Dockerfile-5.3.2">5.3.2</a>:<br>
     <li>bootstrap@5.3.2</li>
     <li>bootstrap-icons@1.11.0</li>
     <li>bootswatch@5.3.2 with google fonts</li>
@@ -35,9 +42,11 @@ docker run --name node-bootstrap       \
 ```
 
 ## Supported apps
+- [ClickAHabit](https://github.com/aceberg/ClickAHabit)
 - [ExerciseDiary](https://github.com/aceberg/ExerciseDiary)
 - [miniboard](https://github.com/aceberg/miniboard)
 - [WatchYourLAN](https://github.com/aceberg/WatchYourLAN)
+- [WatchYourPorts](https://github.com/aceberg/WatchYourPorts)
 
 ## GitHub
 

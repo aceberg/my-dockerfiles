@@ -1,0 +1,15 @@
+FROM node:22-alpine
+EXPOSE 8850/tcp
+WORKDIR /app
+
+RUN npm install http-server -g && \
+    npm install bootstrap@5.3.3 bootstrap-icons@1.11.3 chart.js@4.4.3 chartjs-chart-matrix@2.0.1 aceberg-bootswatch-fork@5.3.3-2
+RUN mv /app/node_modules/aceberg-bootswatch-fork /app/node_modules/bootswatch &&\
+ mkdir -p /app/icons &&\
+ apk add --no-cache bash
+
+COPY node-bootstrap/download-fonts.sh /download-fonts.sh
+RUN bash /download-fonts.sh /app/node_modules/bootswatch
+
+ENTRYPOINT ["http-server"]
+CMD ["--cors", "-p", "8850"]

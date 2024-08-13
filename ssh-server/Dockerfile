@@ -1,4 +1,4 @@
-FROM alpine:latest
+FROM alpine
 
 RUN apk add --no-cache openssh-server && \
     adduser -D sshuser && passwd -u sshuser && ssh-keygen -A

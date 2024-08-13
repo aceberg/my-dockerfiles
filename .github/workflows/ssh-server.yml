@@ -39,12 +39,12 @@ jobs:
         with:
           context: .
           file: ${{ env.IMAGE_NAME }}/Dockerfile
-          platforms: linux/amd64,linux/arm64/v8,arm/v7
+          platforms: linux/amd64,linux/arm64/v8,linux/arm/v7
           push: true
           tags: |
             ${{ secrets.DOCKER_USERNAME }}/${{ env.IMAGE_NAME }}:latest
             ghcr.io/${{ secrets.DOCKER_USERNAME }}/${{ env.IMAGE_NAME }}:latest
-            
+
       - name: Sync README.md to DockerHub
         uses: ms-jpq/sync-dockerhub-readme@v1
         with:

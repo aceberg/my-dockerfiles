@@ -1,6 +1,6 @@
 FROM alpine
 
-RUN apk add --no-cache openssh-server && \
+RUN apk add --no-cache openssh-server tzdata && \
     adduser -D sshuser && passwd -u sshuser && ssh-keygen -A
     
 RUN mkdir /home/sshuser/.ssh && \

@@ -15,7 +15,7 @@ case "$1" in
     ip route add default via $TUN_GW dev $TUN_ETH metric 1
 
     echo 1 > /success
-    echo "Started tunneling all traffic through $TUN_ETH" > /proc/1/fd/1
+    echo "$(date +'%Y-%m-%d %H:%M:%S') INFO Started tunneling all traffic through $TUN_ETH" > /proc/1/fd/1
     ;;
   "stop")
     ip rule del uidrange $BY_UID-$BY_UID lookup 110 pref 28000
@@ -23,7 +23,7 @@ case "$1" in
     ip route del default via $TUN_GW dev $TUN_ETH metric 1
 
     rm /success
-    echo "Stopped tunnelling" > /proc/1/fd/1
+    echo "$(date +'%Y-%m-%d %H:%M:%S') INFO Stopped tunnelling" > /proc/1/fd/1
     ;;
   "status")
     test -f /success

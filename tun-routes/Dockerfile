@@ -1,5 +1,5 @@
 FROM alpine:latest
-RUN apk update && apk add --no-cache iproute2
+RUN apk update && apk add --no-cache iproute2 tzdata
 
 HEALTHCHECK --start-period=5s --interval=5s --timeout=2s --retries=3 CMD ["test", "-f", "/success"]
 

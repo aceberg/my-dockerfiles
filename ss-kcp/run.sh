@@ -1,8 +1,5 @@
 #!/bin/bash
 
-ss-local -c /data/ss-client.json & \
-kcptun-client -c /data/kcp-client.json
-
 
 case "$1" in
   client)
